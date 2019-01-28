@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+flask-admin = "*"
+flask-wtf = "*"
+flask-restful = "*"
+python-dotenv = "*"
+flasgger = "*"
+flask-sqlalchemy = "*"
+flask-security = "*"
+flask-migrate = "*"
+bcrypt = "*"
+flask-babelex = "*"
+flask-debug = "*"
+flask-cors = "*"
+marshmallow-sqlalchemy = "*"
+flask-marshmallow = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
