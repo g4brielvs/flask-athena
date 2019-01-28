@@ -1,0 +1,37 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+{{ super() }}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <h1>Welcome to Athena!</h1>
+      <h2 class="lead">
+        A starter project for web development using <a href="http://flask.pocoo.org/" target="_blank">Flask</a>!
+      </h2>
+      {% if not current_user.is_authenticated %}
+      <p>You can register as a regular user, or log in as a superuser with the following credentials:</p>
+      <ul>
+        <li>email: <b>admin@athena.com</b></li>
+        <li>password: <b>athena</b></li>
+      </ul>
+      <p>
+        <a class="btn btn-primary" href="{{ url_for('security.login') }}">login</a>
+        <a class="btn btn-default" href="{{ url_for('security.register') }}">register</a>
+      </p>
+      {% else %}
+      <p class="lead">Hello {{ current_user.email }}!</p>
+      {% endif %}
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+      <p>You can check <b>Athena</b> in other languages!
+        <br>
+        <a class="btn btn-primary" href="{{ url_for('admin.index') }}?lang=en">en</a>
+        <a class="btn btn-primary" href="{{ url_for('admin.index') }}?lang=es">es</a>
+        <a class="btn btn-primary" href="{{ url_for('admin.index') }}?lang=fr">fr</a>
+        <a class="btn btn-primary" href="{{ url_for('admin.index') }}?lang=pt">pt</a>
+      </p>
+      <p class="lead">{{ _('Just watch as the magic happens!') }}</p>
+    </div>
+  </div>    
+</div>
+{% endblock body %}
