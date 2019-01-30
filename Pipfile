@@ -19,6 +19,7 @@ flask-debug = "*"
 flask-cors = "*"
 marshmallow-sqlalchemy = "*"
 flask-marshmallow = "*"
+pytest = "*"
 
 [dev-packages]
 
